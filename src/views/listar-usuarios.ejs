@@ -1,0 +1,32 @@
+<%- include('./partials/topo', {titulo:"Página Usuarios"}) %>
+
+<div class="row mt-4">
+  <h2 class="mr-5">Usuarios Cadastrados</h2>
+  <a href="http://localhost:3000/usuarios/novo">
+    <button type="button" class="btn btn-primary">
+      Novo Usuario
+    </button>
+  </a>
+</div>
+
+<table border ="3" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>    
+    <% for(usuario of usuarios) { %>
+      <tr>
+        <td> <%= usuario.codigo %> </td>
+        <td> <%= usuario.nome %> </td>
+        <td> <%= usuario.email %> </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+
+<%- include('./partials/rodape') %>

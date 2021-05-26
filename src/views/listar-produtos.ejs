@@ -1,0 +1,32 @@
+<%- include('./partials/topo', {titulo:"Página Produtos"}) %>
+
+<div class="row mt-4">
+  <h2 class="mr-5">Estoque de Produtos</h2>
+  <a href="http://localhost:3000/produtos/novo">
+    <button type="button" class="btn btn-primary">
+      Novo Produto
+    </button>
+  </a>
+</div>
+
+<table border ="3" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Produto</th>
+      <th scope="col">Preço</th>
+    </tr>
+  </thead>
+  <tbody>    
+    <% for(p of produtos) { %>
+      <tr>
+        <td> <%= p.codigo %> </td>
+        <td> <%= p.desc %> </td>
+        <td> <%= p.preco %> </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+
+<%- include('./partials/rodape') %>

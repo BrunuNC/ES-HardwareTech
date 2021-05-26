@@ -1,0 +1,32 @@
+<%- include('./partials/topo', {titulo:"Página Principal"}) %>
+
+  <h2 class="my-4">Novo Produto</h2>
+
+  <form class="needs-validation" 
+      action="/produtos"
+      method="post"
+      novalidate>
+      
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Descrição</label>
+        <input type="text" name="desc" class="form-control" id="validationCustom01"required>
+        <div class="invalid-feedback">
+          Informe o nome do Produto
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Preço</label>
+        <input type="number" name="preco" class="form-control" id="validationCustom02" required>
+        <div class="invalid-feedback">
+          Por favor, informe um preço válido.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
+  </form>
+
+<%- include('./partials/rodape') %>
